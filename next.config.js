@@ -1,3 +1,13 @@
-const withPlugins = require('next-compose-plugins');
+module.exports = {
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      issuer: {
+        test: /\.(js|ts)x?$/,
+      },
+      use: ["@svgr/webpack"],
+    });
 
-module.exports = withPlugins([], {});
+    return config;
+  },
+};
