@@ -50,6 +50,3 @@ jobs:
       - name: Run tests
         run: yarn test
 
-      - name: Build project
-        run: next build
-
