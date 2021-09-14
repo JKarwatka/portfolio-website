@@ -1,11 +1,10 @@
 import React from "react";
-import { AppBar, Toolbar } from "@material-ui/core";
-import { CustomLink } from "@components/CustomLink";
+import { AppBar, Link, Toolbar } from "@mui/material";
 import { LinksContainer, ToolbarContainer } from "./atoms";
 
 interface NavBarProps {
   renderLogo: () => JSX.Element;
-  links: Link[];
+  links?: Link[];
 }
 
 interface Link {
@@ -14,7 +13,29 @@ interface Link {
   onClick?: () => void;
 }
 
-export const NavBar: React.FC<NavBarProps> = ({ links, renderLogo }) => {
+const linksData: Link[] = [
+  {
+    href: "#",
+    title: "Home",
+  },
+  {
+    href: "#",
+    title: "About",
+  },
+  {
+    href: "#",
+    title: "Projects",
+  },
+  {
+    href: "#",
+    title: "Contact",
+  },
+];
+
+export const NavBar: React.FC<NavBarProps> = ({
+  links = linksData,
+  renderLogo,
+}) => {
   return (
     <AppBar position="static">
       <Toolbar>
@@ -22,7 +43,7 @@ export const NavBar: React.FC<NavBarProps> = ({ links, renderLogo }) => {
           {renderLogo()}
           <LinksContainer>
             {links.map(({ href, title }) => (
-              <CustomLink href={href}>{title}</CustomLink>
+              <Link href={href}>{title}</Link>
             ))}
           </LinksContainer>
         </ToolbarContainer>
