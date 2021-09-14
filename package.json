@@ -24,6 +24,8 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.7",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "@mui/material": "^5.0.0-rc.1",
     "@mui/styled-engine-sc": "^5.0.0-rc.1",
     "@next/bundle-analyzer": "^10.0.5",
