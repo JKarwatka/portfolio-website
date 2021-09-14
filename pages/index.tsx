@@ -1,15 +1,17 @@
 import React from "react";
-import { Button, CssBaseline } from "@material-ui/core";
-import { ThemeProvider } from "@material-ui/styles";
+import { CssBaseline } from "@mui/material";
+import { NavBar } from "@components/NavBar";
+import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "src/utils/theme";
+import { LogoIcon } from "@components/LogoIcon";
+
+const renderLogo = () => <LogoIcon />;
 
 const Home: React.FC = () => {
   return (
     <CssBaseline>
       <ThemeProvider theme={theme}>
-        <Button variant="outlined" color="secondary">
-          Hello There!
-        </Button>
+        <NavBar renderLogo={renderLogo}></NavBar>
       </ThemeProvider>
     </CssBaseline>
   );
