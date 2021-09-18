@@ -35,19 +35,17 @@ const linksData: Link[] = [
 export const NavBar: React.FC<NavBarProps> = ({
   links = linksData,
   renderLogo,
-}) => {
-  return (
-    <AppBar position="static">
-      <Toolbar>
-        <ToolbarContainer>
-          {renderLogo()}
-          <LinksContainer>
-            {links.map(({ href, title }) => (
-              <Link href={href}>{title}</Link>
-            ))}
-          </LinksContainer>
-        </ToolbarContainer>
-      </Toolbar>
-    </AppBar>
-  );
-};
+}) => (
+  <AppBar position="absolute">
+    <Toolbar>
+      <ToolbarContainer>
+        {renderLogo()}
+        <LinksContainer>
+          {links.map(({ href, title }) => (
+            <Link href={href}>{title}</Link>
+          ))}
+        </LinksContainer>
+      </ToolbarContainer>
+    </Toolbar>
+  </AppBar>
+);
