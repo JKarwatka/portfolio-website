@@ -36,7 +36,7 @@ export const NavBar: React.FC<NavBarProps> = ({
   links = linksData,
   renderLogo,
 }) => (
-  <AppBar position="sticky">
+  <AppBar position="absolute">
     <Toolbar>
       <ToolbarContainer>
         {renderLogo()}
