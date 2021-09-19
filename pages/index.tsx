@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "src/utils/theme";
 import { LogoIcon } from "@components/LogoIcon";
 import { HeroSection } from "@components/HeroSection";
+import { AboutSection } from "@components/AboutSection";
 
 const renderLogo = () => <LogoIcon />;
 
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <ThemeProvider theme={theme}>
         <NavBar renderLogo={renderLogo}></NavBar>
         <HeroSection />
+        <AboutSection />
       </ThemeProvider>
     </CssBaseline>
   );
