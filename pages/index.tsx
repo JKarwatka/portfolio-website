@@ -6,6 +6,7 @@ import { theme } from "src/utils/theme";
 import { LogoIcon } from "@components/LogoIcon";
 import { HeroSection } from "@components/HeroSection";
 import { AboutSection } from "@components/AboutSection";
+import { ProjectsSection } from "@components/ProjectsSection";
 
 const renderLogo = () => <LogoIcon />;
 
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
         <NavBar renderLogo={renderLogo}></NavBar>
         <HeroSection />
         <AboutSection />
+        <ProjectsSection />
       </ThemeProvider>
     </CssBaseline>
   );

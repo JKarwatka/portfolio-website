@@ -41,8 +41,10 @@ export const NavBar: React.FC<NavBarProps> = ({
       <ToolbarContainer>
         {renderLogo()}
         <LinksContainer>
-          {links.map(({ href, title }) => (
-            <Link href={href}>{title}</Link>
+          {links.map(({ href, title }, index) => (
+            <Link key={index} href={href}>
+              {title}
+            </Link>
           ))}
         </LinksContainer>
       </ToolbarContainer>
